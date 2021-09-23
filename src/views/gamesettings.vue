@@ -61,7 +61,7 @@ const game = computed(() => store.getters['game/getGameInfo'])
 const gameSettings = computed(() => game.value)
 
 const btnPlay = () => {
-  router.push('gameboard')
+  router.push('game')
 }
 
 watch(gameSettings.value, () => {

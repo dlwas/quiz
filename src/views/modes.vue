@@ -36,7 +36,6 @@ console.log({ router })
 
 const selectMode = (selectedMode: string) => {
   store.commit('game/setGamemode', selectedMode)
-
-  router.push('/game')
+  router.push('/gamesettings')
 }
 </script>
