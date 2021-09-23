@@ -15,10 +15,10 @@
   },
   "modes": {
     "random": "losowy",
-    "currency": "waluty",
+    "currency": "walute",
     "boundaries": "granice",
     "capitals": "stolice",
-    "flags": "flagi"
+    "flags": "flage"
   },
   "modeSubtitles": ["tryb", "zgadnij "],
   "language": "język",
