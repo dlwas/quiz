@@ -1,0 +1,22 @@
+{
+  "title": "quiz",
+  "subtitle": "countries",
+  "button": {
+    "play": "challenge yourself"
+  },
+  "routes": {
+    "all": "",
+    "index": "",
+    "modes": "modes",
+    "user": "user",
+    "settings": "settings",
+    "gameboard": "gameboard",
+    "scores": "scores"
+  },
+  "language": "language",
+  "theme": "theme",
+  "english": "english",
+  "polish": "polish",
+  "dark": "dark",
+  "light": "light"
+}

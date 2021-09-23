@@ -1,0 +1,22 @@
+{
+  "title": "quiz",
+  "subtitle": "countries",
+  "button": {
+    "play": "sprawdź się"
+  },
+  "routes": {
+    "all": "",
+    "index": "",
+    "modes": "tryby",
+    "user": "profil",
+    "settings": "ustawienia",
+    "gameboard": "",
+    "scores": "wynik"
+  },
+  "language": "język",
+  "theme": "motyw",
+  "english": "angielski",
+  "polish": "polski",
+  "dark": "ciemny",
+  "light": "jasny"
+}
