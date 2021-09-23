@@ -1,8 +1,13 @@
 {
+  "notFound": "nie znaleziono",
+  "backHome": "wrócić do domu",
   "title": "quiz",
   "subtitle": "countries",
   "button": {
-    "play": "sprawdź się"
+    "play": "sprawdź się",
+    "next": "następne",
+    "score": "wynik",
+    "again": "ponownie"
   },
   "routes": {
     "all": "",
@@ -11,14 +16,24 @@
     "user": "profil",
     "settings": "ustawienia",
     "gameboard": "",
+    "gamesettings": "ustawienia gry",
     "scores": "wynik"
   },
   "modes": {
-    "random": "losowy",
-    "currency": "walute",
-    "boundaries": "granice",
-    "capitals": "stolice",
-    "flags": "flage"
+    "random": ["losowy", "losowy"],
+    "currency": ["waluta", "walute"],
+    "boundarie": ["granica", "granice"],
+    "capital": ["stolica", "stolice"],
+    "flag": ["flaga", "flage"]
+  },
+  "difficulties": {
+    "easy": "łatwy",
+    "normal": "normalny",
+    "hard": "trudny"
+  },
+  "rooms": {
+    "solo": "solo",
+    "frend": "wielo"
   },
   "modeSubtitles": ["tryb", "zgadnij "],
   "language": "język",
@@ -26,5 +41,9 @@
   "english": "angielski",
   "polish": "polski",
   "dark": "ciemny",
-  "light": "jasny"
+  "light": "jasny",
+  "rounds": "rundy",
+  "difficulty": "trudność",
+  "room": "pokój",
+  "copyLink": "kopiuj link"
 }

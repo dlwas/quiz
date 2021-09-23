@@ -3,12 +3,15 @@ export declare namespace gameState {
     mode: string
     rounds: number
     difficulty: string
-    isPrivate: boolean
+    room: string
   }
   export interface RootObject {
-    game: Game,
+    game: Game
     modes: string[]
     subtitles: string[]
+    rounds: number[]
+    difficulty: string[]
+    room: string[]
   }
 }
 

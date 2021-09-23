@@ -103,6 +103,22 @@ export default {
         },
         text: 'question 1/1',
       },
+      gamesettings: {
+        icon: {
+          left: 'arrow',
+          right: 'user',
+        },
+        path: {
+          left: 'modes',
+          right: 'user',
+        },
+        active: {
+          left: true,
+          right: true,
+          text: true,
+        },
+        text: 'settings',
+      },
       score: {
         icon: {
           left: 'times',

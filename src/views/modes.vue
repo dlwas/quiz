@@ -17,13 +17,13 @@
       <Icon :name="`card-${modeName}`" class="my-0 mx-0 w-full h-full" />
       <div class="absolute text-center uppercase">
         <h3 class="font-main font-extrabold text-gold text-xl sm:text-xl">
-          {{ $t(`modes.${modeName}`) }}
+          {{ $t(`modes.${modeName}[0]`) }}
         </h3>
         <p class="font-second font-medium text-white text-tiny sm:text-xs">
           {{
             modeName == 'random'
-              ? `${$t(`modes.${modeName}`)} ${$t(`modeSubtitles[0]`)}`
-              : `${$t(`modeSubtitles[1]`)} ${$t(`modes.${modeName}`)}`
+              ? `${$t(`modes.${modeName}[1]`)} ${$t(`modeSubtitles[0]`)}`
+              : `${$t(`modeSubtitles[1]`)} ${$t(`modes.${modeName}[1]`)}`
           }}
         </p>
       </div>
@@ -44,6 +44,6 @@ const modes = computed(() => store.getters['game/getModes'])
 
 const selectMode = (selectedMode: string) => {
   store.commit('game/setGamemode', selectedMode)
-  router.push('/game')
+  router.push('/gamesettings')
 }
 </script>

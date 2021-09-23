@@ -1,7 +1,14 @@
 {
   "files.exclude": {
     "node_modules/": true,
-    "dist/": true
+    "dist/": true,
+    ".gitattributes": true,
+    ".gitignore": true,
+    ".prettierrc.json": true,
+    "package-lock.json": true,
+    "postcss.config.js": true,
+    "START.bat": true,
+    "public": true,
   },
   "workbench.colorTheme": "Default Dark+",
   "workbench.sideBar.location": "right",
@@ -14,7 +21,7 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0,
   "liveServer.settings.donotShowInfoMsg": true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"

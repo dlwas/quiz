@@ -7,9 +7,9 @@
       flex
       justify-center
       items-center
-      px-6
+      px-4
       py-2
-      text-base
+      text-sm
       uppercase
       bg-grey-darken
       rounded-full

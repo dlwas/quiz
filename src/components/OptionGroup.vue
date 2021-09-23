@@ -3,7 +3,7 @@
     <div class="text-center">
       <Label :text="text" />
     </div>
-    <div class="flex flex-wrap justify-center gap-5">
+    <div class="flex flex-wrap justify-center gap-2">
       <slot />
     </div>
   </div>

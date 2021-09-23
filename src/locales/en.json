@@ -1,8 +1,13 @@
 {
+  "notFound": "not found",
+  "backHome": "back to home",
   "title": "quiz",
   "subtitle": "countries",
   "button": {
-    "play": "challenge yourself"
+    "play": "challenge yourself",
+    "next": "next",
+    "score": "score",
+    "again": "again"
   },
   "routes": {
     "all": "",
@@ -11,14 +16,24 @@
     "user": "user",
     "settings": "settings",
     "gameboard": "gameboard",
+    "gamesettings": "game settings",
     "scores": "scores"
   },
   "modes": {
-    "random": "random",
-    "currency": "currency",
-    "boundaries": "boundaries",
-    "capitals": "capitals",
-    "flags": "flags"
+    "random": ["random", "random"],
+    "currency": ["currency", "currencies"],
+    "boundarie": ["boundarie", "boundaries"],
+    "capital": ["capital", "capitals"],
+    "flag": ["flag", "flags"]
+  },
+  "difficulties": {
+    "easy": "easy",
+    "normal": "normal",
+    "hard": "hard"
+  },
+  "rooms": {
+    "solo": "solo",
+    "frend": "frend"
   },
   "modeSubtitles": ["mode", "guess the "],
   "language": "language",
@@ -26,5 +41,9 @@
   "english": "english",
   "polish": "polish",
   "dark": "dark",
-  "light": "light"
+  "light": "light",
+  "rounds": "rounds",
+  "difficulty": "difficulty",
+  "room": "room",
+  "copyLink": "copy link"
 }

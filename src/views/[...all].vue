@@ -11,12 +11,16 @@
         uppercase
       "
     >
-      <p>Not found</p>
+      <p>
+        {{ $t('notFound')}}
+      </p>
       <p>404</p>
     </div>
     <Btn :bg="false" @click="btnClick">
       <Icon name="arrow" color="white" />
-      <span class="mx-2">Back to home</span>
+      <span class="mx-2">
+        {{ $t('backHome')}}
+      </span>
     </Btn>
   </div>
 </template>
