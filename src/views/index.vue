@@ -4,14 +4,11 @@
       class="
         my-16
         tracking-wide
-        font-main
-        text-center
+        font-main font-extrabold
+        text-gold text-center text-5xl
         sm:text-6xl
-        text-gold
-        ip:text-5xl
         uppercase
-      "
-    >
+      ">
       <p>
         {{ $t('title') }}
       </p>

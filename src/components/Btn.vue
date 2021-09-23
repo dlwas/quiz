@@ -4,7 +4,6 @@
       btn
       cursor-pointer
       font-second
-      w-
       flex
       justify-center
       items-center

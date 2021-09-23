@@ -13,6 +13,14 @@
     "gameboard": "gameboard",
     "scores": "scores"
   },
+  "modes": {
+    "random": "random",
+    "currency": "currency",
+    "boundaries": "boundaries",
+    "capitals": "capitals",
+    "flags": "flags"
+  },
+  "modeSubtitles": ["mode", "guess the "],
   "language": "language",
   "theme": "theme",
   "english": "english",

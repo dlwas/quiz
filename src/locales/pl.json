@@ -13,6 +13,14 @@
     "gameboard": "",
     "scores": "wynik"
   },
+  "modes": {
+    "random": "losowy",
+    "currency": "waluty",
+    "boundaries": "granice",
+    "capitals": "stolice",
+    "flags": "flagi"
+  },
+  "modeSubtitles": ["tryb", "zgadnij "],
   "language": "język",
   "theme": "motyw",
   "english": "angielski",

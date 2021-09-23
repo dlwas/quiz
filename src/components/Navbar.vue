@@ -1,12 +1,11 @@
 <template>
-  <div id="navbar" class="z-3 p-4 flex mb-4 ">
+  <div id="navbar" class="p-4 flex mb-4">
     <div class="flex flex-none cursor-pointer w-10">
       <Icon
         v-show="data.active['left']"
         @click="navClick('left')"
         :name="data.icon['left']"
-        class="w-6 h-6 m-2"
-      />
+        class="w-6 h-6 m-2" />
     </div>
     <span
       class="
@@ -16,8 +15,7 @@
         font-second
         uppercase
         text-xl text-gold
-      "
-    >
+      ">
       {{ routeName }}
     </span>
     <div class="flex flex-none cursor-pointer w-10">
@@ -25,8 +23,7 @@
         v-show="data.active['right']"
         @click="navClick('right')"
         :name="data.icon['right']"
-        class="w-6 h-6 m-2"
-      />
+        class="w-6 h-6 m-2" />
     </div>
   </div>
 </template>

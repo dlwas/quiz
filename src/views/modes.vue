@@ -1,12 +1,49 @@
 <template>
-  <div id="mdoes" class="grid grid-cols-2 justify-items-center sm:px-8 ip:px-4">
-    <div v-for="card in cards" class="mb-6 w-32 h-36 sm:w-44 sm:h-48 ">
-      <Icon :name="`card-${card}`" class="mx-0 my-0 w-full h-full" />
+  <div
+    id="mdoes"
+    class="grid grid-cols-2 md:grid-cols-3 place-content-start w-full px-2">
+    <div
+      @click="selectMode(modeName)"
+      v-for="modeName in modes"
+      class="
+        card
+        flex
+        h-48
+        sm:h-60
+        md:h-80
+        pb-4
+        place-items-center place-content-center
+      ">
+      <Icon :name="`card-${modeName}`" class="my-0 mx-0 w-full h-full" />
+      <div class="absolute text-center uppercase">
+        <h3 class="font-main font-extrabold text-gold text-xl sm:text-xl">
+          {{ $t(`modes.${modeName}`) }}
+        </h3>
+        <p class="font-second font-medium text-white text-tiny sm:text-xs">
+          {{
+            modeName == 'random'
+              ? `${$t(`modes.${modeName}`)} ${$t(`modeSubtitles[0]`)}`
+              : `${$t(`modeSubtitles[1]`)} ${$t(`modes.${modeName}`)}`
+          }}
+        </p>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
+import { useStore } from 'vuex'
+import { useRouter } from 'vue-router'
 import Icon from '../components/Icon.vue'
-const cards = ['random', 'currency', 'boundaries', 'capitals', 'flags']
+
+const store = useStore()
+const router = useRouter()
+
+const modes = computed(() => store.getters['game/getModes'])
+
+const selectMode = (selectedMode: string) => {
+  store.commit('game/setGamemode', selectedMode)
+  router.push('/game')
+}
 </script>

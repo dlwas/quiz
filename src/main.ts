@@ -21,7 +21,7 @@ const i18n = createI18n({
   locale: langState.setted,
   fallbackLocale: getDefault(),
   globalInjection: true,
-  messages: langState.locales
+  messages: langState.locales,
 })
 
 const router = createRouter({
