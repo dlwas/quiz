@@ -1,9 +1,19 @@
 <template>
-  <div id="mdoes" class="grid grid-cols-2 md:grid-cols-3 place-content-start w-full px-2">
+  <div id="mdoes" class="flex flex-wrap place-content-center w-full px-2">
     <div
       @click="selectMode(modeName)"
       v-for="modeName in modes"
-      class="card flex h-48 sm:h-60 md:h-80 pb-4 place-items-center place-content-center">
+      class="
+        card
+        flex
+        w-36
+        sm:w-44
+        h-44
+        sm:h-56
+        md:h-52
+        pb-4
+        place-items-center place-content-center
+      ">
       <Icon :name="`card-${modeName}`" class="my-0 mx-0 w-full h-full" />
       <div class="absolute text-center uppercase">
         <h3 class="font-main font-extrabold text-gold text-xl sm:text-xl">
