@@ -16,10 +16,6 @@ export function init(...args: any): void {
   }
 }
 
-export function fixRoutePath(path: string): string {
-  return path == 'index' ? '' : path
-}
-
 export const loadModules = (globObject: any): object => {
   let modules = {}
 

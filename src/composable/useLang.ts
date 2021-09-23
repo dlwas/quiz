@@ -1,5 +1,6 @@
 import { reactive, watchEffect } from 'vue'
 import { getStorage, setStorage } from './useLocalStorage'
+import { langTypes } from '../types/langTypes'
 
 import en from '../locales/en.json'
 import pl from '../locales/pl.json'
@@ -8,7 +9,7 @@ import pl from '../locales/pl.json'
 const storageName = 'settedLanguage'
 const storageSetted = getStorage(storageName) || getDefault()
 
-export const state = reactive({
+export const state = reactive(<langTypes.RootObject>{
   default: getDefault(),
   setted: storageSetted,
   locales: {

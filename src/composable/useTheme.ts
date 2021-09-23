@@ -1,10 +1,12 @@
 import { reactive, watchEffect } from 'vue'
 import { getStorage, setStorage } from './useLocalStorage'
 
+import { themeTypes } from '../types/themeTypes'
+
 const storageName = 'settedTheme'
 const storageSetted = getStorage(storageName) || getDefault()
 
-export const state = reactive({
+export const state = reactive(<themeTypes.RootObject>{
   default: getDefault(),
   setted: storageSetted,
   html: document.querySelector('html'),
@@ -24,9 +26,7 @@ function getName(name: string | boolean): string | undefined {
 }
 
 export function getDefault(): string {
-  const defaultName = getName(
-    window.matchMedia('(prefers-color-scheme: dark)').matches
-  )
+  const defaultName = getName(window.matchMedia('(prefers-color-scheme: dark)').matches)
   return defaultName ? defaultName : 'dark'
 }
 

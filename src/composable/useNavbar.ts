@@ -47,7 +47,7 @@ export const navbarState = reactive(<navbarTypes.RootObject>{
       rightPath: '',
       text: 'settings',
     },
-    gameboard: {
+    game: {
       leftIcon: 'times',
       leftPath: 'modes',
       rightIcon: '',
