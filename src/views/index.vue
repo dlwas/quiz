@@ -17,7 +17,7 @@
       </p>
     </div>
     <Btn @click="btnClick">
-      {{ $t('button.play') }}
+      {{ $t('button.challenge') }}
     </Btn>
   </div>
 </template>

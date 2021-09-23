@@ -6,14 +6,11 @@ import 'virtual:svg-icons-register'
 import store from './stores'
 import App from './App.vue'
 import './styles/main.css'
+import QrcodeVue from 'qrcode.vue'
 
-import { init } from './composable/useUtils'
+import { setByName } from './composable/useNavbar'
 import { setTheme } from './composable/useTheme'
 import { getDefault, state as langState } from './composable/useLang'
-
-init(() => {
-  setTheme()
-})
 
 const i18n = createI18n({
   mode: 'composition',
@@ -30,11 +27,14 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from) => {
-  store.commit('navbar/set', to.name)
+  const path = String(to.name)
+  setTheme()
+  setByName(path)
 })
 
 const app = createApp(App)
 app.use(router)
 app.use(store)
 app.use(i18n)
+app.use(QrcodeVue as keyof object)
 app.mount('#app')

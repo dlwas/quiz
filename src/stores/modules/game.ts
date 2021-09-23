@@ -6,7 +6,7 @@ export default {
     modes: ['random', 'currency', 'boundarie', 'capital', 'flag'],
     rounds: [10, 15],
     difficulty: ['normal', 'hard'],
-    room: ['solo', 'frend'],
+    room: ['solo'], // , 'frend'
     game: {
       mode: '',
       rounds: 10,

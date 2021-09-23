@@ -4,7 +4,8 @@
   "title": "quiz",
   "subtitle": "countries",
   "button": {
-    "play": "sprawdź się",
+    "challenge": "sprawdź się",
+    "play": "graj",
     "next": "następne",
     "score": "wynik",
     "again": "ponownie"
@@ -45,5 +46,6 @@
   "rounds": "rundy",
   "difficulty": "trudność",
   "room": "pokój",
+  "roomid": "id pokoju",
   "copyLink": "kopiuj link"
 }

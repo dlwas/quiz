@@ -1,4 +1,3 @@
-
 export function throwError(functionName: string, message: string): void {
   throw new Error(`[${functionName}]: ${message.toUpperCase()}`)
 }
@@ -15,6 +14,10 @@ export function init(...args: any): void {
   for (let i = 0; i < args.length; i++) {
     args[i]()
   }
+}
+
+export function fixRoutePath(path: string): string {
+  return path == 'index' ? '' : path
 }
 
 export const loadModules = (globObject: any): object => {
