@@ -9,7 +9,7 @@ import pl from '../locales/pl.json'
 const storageName = 'settedLanguage'
 const storageSetted = getStorage(storageName) || getDefault()
 
-export const state = reactive(<langTypes.RootObject>{
+export const stateLang = reactive(<langTypes.RootObject>{
   default: getDefault(),
   setted: storageSetted,
   locales: {
@@ -24,7 +24,7 @@ export function getDefault(): string {
 }
 
 export const setLang = (payload: string = storageSetted): void => {
-  state.setted = payload
+  stateLang.setted = payload
   setStorage(storageName, payload)
 }
 
@@ -32,4 +32,4 @@ watchEffect(() => {
   setLang()
 })
 
-export default { state, setLang, getDefault }
+export default { stateLang, setLang, getDefault }

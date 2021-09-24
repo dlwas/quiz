@@ -6,7 +6,7 @@ import { themeTypes } from '../types/themeTypes'
 const storageName = 'settedTheme'
 const storageSetted = getStorage(storageName) || getDefault()
 
-export const state = reactive(<themeTypes.RootObject>{
+export const stateTheme = reactive(<themeTypes.RootObject>{
   default: getDefault(),
   setted: storageSetted,
   html: document.querySelector('html'),
@@ -33,16 +33,16 @@ export function getDefault(): string {
 export const setTheme = (payload: string = storageSetted): void | undefined => {
   const settedTheme = getName(payload)
   if (settedTheme) {
-    state.setted = settedTheme
-    if (state.html) {
-      state.html.dataset.theme = settedTheme
+    stateTheme.setted = settedTheme
+    if (stateTheme.html) {
+      stateTheme.html.dataset.theme = settedTheme
       setStorage(storageName, settedTheme)
     }
   }
 }
 
 export const toggleTheme = (): void | undefined => {
-  const toggledTheme = state.setted == 'dark' ? 'light' : 'dark'
+  const toggledTheme = stateTheme.setted == 'dark' ? 'light' : 'dark'
   if (toggledTheme) {
     setTheme(toggledTheme)
   }
@@ -52,4 +52,4 @@ watchEffect(() => {
   setTheme()
 })
 
-export default { state, setTheme, toggleTheme }
+export default { stateTheme, setTheme, toggleTheme }

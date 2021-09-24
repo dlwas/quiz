@@ -2,33 +2,33 @@
   <div class="flex flex-col mt-6 gap-y-6 place-items-center text-center">
     <OptionGroup :text="$t('rounds')">
       <Btn
-        v-for="round in rounds"
+        v-for="round in gameData.rounds"
         class="w-32"
-        :bg="game.rounds == round"
-        @click="gameSettings.rounds = round">
+        :bg="gameSetted.rounds == round"
+        @click="gameSetted.rounds = round">
         {{ round }}
       </Btn>
     </OptionGroup>
     <OptionGroup :text="$t('difficulty')">
       <Btn
-        v-for="difficulty in difficulties"
+        v-for="difficulty in gameData.difficulty"
         class="w-32"
-        :bg="game.difficulty == difficulty"
-        @click="gameSettings.difficulty = difficulty">
+        :bg="gameSetted.difficulty == difficulty"
+        @click="gameSetted.difficulty = difficulty">
         {{ $t(`difficulties.${difficulty}`) }}
       </Btn>
     </OptionGroup>
     <!-- <OptionGroup :text="$t('room')">
       <Btn
-        v-for="room in rooms"
+        v-for="room in gameData.room"
         class="w-32"
-        :bg="game.room == room"
-        @click="gameSettings.room = room">
+        :bg="gameSetted.room == room"
+        @click="gameSetted.room = room">
         {{ $t(`rooms.${room}`) }}
       </Btn>
-    </OptionGroup> -->
-    <!-- <div class="mt-5" v-if="gameSettings.room == 'frend'">
-      <Label :text="`${$t('roomid')}`" />
+    </OptionGroup>
+    <div class="mt-5" v-if="gameSetted.room == 'frend'">
+      <Label> {{ $t('roomid') }} </Label>
       <p class="text-5xl text-white uppercase">AAAA</p>
       <Qr value="AAAA" class="mt-4" />
       <CopyClipboard data="asd" />
@@ -42,8 +42,9 @@
 <script lang="ts" setup>
 import { computed, watch } from 'vue'
 import { useRouter } from 'vue-router'
-import { useStore } from 'vuex'
+import { stateGame, setSettings } from '../composable/useGame'
 import OptionGroup from '~/components/OptionGroup.vue'
+
 import Btn from '../components/Btn.vue'
 
 // TODO: backend not ready for multiplayer with friend feature
@@ -51,20 +52,16 @@ import Btn from '../components/Btn.vue'
 // import Qr from '../components/Qr.vue'
 // import CopyClipboard from '../components/CopyClipboard.vue'
 
-const store = useStore()
 const router = useRouter()
 
-const rounds = computed(() => store.getters['game/getRounds'])
-const difficulties = computed(() => store.getters['game/getDifficulty'])
-const rooms = computed(() => store.getters['game/getRoom'])
-const game = computed(() => store.getters['game/getGameInfo'])
-const gameSettings = computed(() => game.value)
+const gameData = computed(() => stateGame)
+const gameSetted = computed(() => stateGame.game)
 
 const btnPlay = () => {
   router.push('game')
 }
 
-watch(gameSettings.value, () => {
-  store.commit('game/setSettigns', gameSettings)
+watch(gameSetted.value, () => {
+  setSettings(gameSetted.value)
 })
 </script>

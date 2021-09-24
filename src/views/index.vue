@@ -16,7 +16,7 @@
         {{ $t('subtitle') }}
       </p>
     </div>
-    <Btn @click="btnClick">
+    <Btn class="w-52" @click="btnClick">
       {{ $t('button.challenge') }}
     </Btn>
   </div>

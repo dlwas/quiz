@@ -1,7 +1,7 @@
 <template>
   <div id="mdoes" class="flex flex-wrap place-content-center w-full px-2">
     <div
-      @click="selectMode(modeName)"
+      @click="bntSelectMode(modeName)"
       v-for="modeName in modes"
       class="
         card
@@ -33,19 +33,16 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
+import { stateGame, setGameMode } from '../composable/useGame'
 import Icon from '../components/Icon.vue'
 
-const store = useStore()
 const router = useRouter()
 
-const modes = computed(() => store.getters['game/getModes'])
+const modes = computed(() => stateGame.modes)
 
-console.log({ router })
-
-const selectMode = (selectedMode: string) => {
-  store.commit('game/setGamemode', selectedMode)
+const bntSelectMode = (selectedMode: string) => {
+  setGameMode(selectedMode)
   router.push('/gamesettings')
 }
 </script>

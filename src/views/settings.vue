@@ -21,15 +21,15 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { state as themeState, setTheme } from '../composable/useTheme'
-import { state as langState, setLang } from '../composable/useLang'
+import { stateTheme, setTheme } from '../composable/useTheme'
+import { stateLang, setLang } from '../composable/useLang'
 import { useI18n } from 'vue-i18n'
 import OptionGroup from '~/components/OptionGroup.vue'
 import Btn from '~/components/Btn.vue'
 
 const { locale } = useI18n()
-const isDark = computed(() => themeState.setted == 'dark')
-const isEnglish = computed(() => langState.setted == 'en')
+const isDark = computed(() => stateTheme.setted == 'dark')
+const isEnglish = computed(() => stateLang.setted == 'en')
 
 const setLocale = (name: string): void => {
   locale.value = name

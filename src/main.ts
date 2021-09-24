@@ -10,15 +10,15 @@ import QrcodeVue from 'qrcode.vue'
 
 import { setByName } from './composable/useNavbar'
 import { setTheme } from './composable/useTheme'
-import { getDefault, state as langState } from './composable/useLang'
+import { getDefault, stateLang } from './composable/useLang'
 
 const i18n = createI18n({
   mode: 'composition',
   legacy: true,
-  locale: langState.setted,
+  locale: stateLang.setted,
   fallbackLocale: getDefault(),
   globalInjection: true,
-  messages: langState.locales,
+  messages: stateLang.locales,
 })
 
 const router = createRouter({

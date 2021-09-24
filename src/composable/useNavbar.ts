@@ -2,7 +2,7 @@ import { reactive, watchEffect } from 'vue'
 import { ifKeyExist } from './useUtils'
 import navbarTypes from '../types/navbarTypes'
 
-export const navbarState = reactive(<navbarTypes.RootObject>{
+export const stateNavbar = reactive(<navbarTypes.RootObject>{
   default: 'index',
   data: {
     leftIcon: 'cog',
@@ -78,17 +78,17 @@ export const navbarState = reactive(<navbarTypes.RootObject>{
   },
 })
 
-export const setByName = (name: string = navbarState.default): void => {
-  if (ifKeyExist(navbarState.templates, name)) {
-    navbarState.data = navbarState.templates[name]
+export const setByName = (name: string = stateNavbar.default): void => {
+  if (ifKeyExist(stateNavbar.templates, name)) {
+    stateNavbar.data = stateNavbar.templates[name]
   } else {
-    navbarState.data = navbarState.templates[navbarState.default]
+    stateNavbar.data = stateNavbar.templates[stateNavbar.default]
   }
 }
 
 export const updateProperty = (property: string, value: string | boolean): void => {
-  if (ifKeyExist(navbarState.data, property)) {
-    navbarState.data[property] = value
+  if (ifKeyExist(stateNavbar.data, property)) {
+    stateNavbar.data[property] = value
   }
 }
 
@@ -96,4 +96,4 @@ watchEffect(() => {
   setByName()
 })
 
-export default { navbarState, setByName, updateProperty }
+export default { stateNavbar, setByName, updateProperty }

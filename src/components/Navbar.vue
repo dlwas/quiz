@@ -16,13 +16,13 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
-import { navbarState } from '../composable/useNavbar'
+import { stateNavbar } from '../composable/useNavbar'
 import Icon from '~/components/Icon.vue'
 
 const router = useRouter()
 
-const data = computed(() => navbarState.data)
-const routeName = computed(() => navbarState.data.text)
+const data = computed(() => stateNavbar.data)
+const routeName = computed(() => stateNavbar.data.text)
 
 const leftClick = () => router.push(data.value.leftPath ? String(data.value.leftPath) : '')
 const rightClick = () => router.push(data.value.rightPath ? String(data.value.rightPath) : '')
