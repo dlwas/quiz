@@ -30,11 +30,14 @@ export function getDefault(): string {
   return defaultName ? defaultName : 'dark'
 }
 
-export const setTheme = (payload: string = storageSetted): void | undefined => {
+export const setTheme = (payload: string = storageSetted): void => {
   const settedTheme = getName(payload)
   if (settedTheme) {
     stateTheme.setted = settedTheme
     if (stateTheme.html) {
+      const toggledTheme = getName(settedTheme == 'dark' ? 'light' : 'dark')
+      stateTheme.html.classList.add(settedTheme)
+      stateTheme.html.classList.remove(toggledTheme ? toggledTheme : 'dark')
       stateTheme.html.dataset.theme = settedTheme
       setStorage(storageName, settedTheme)
     }

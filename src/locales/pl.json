@@ -16,9 +16,11 @@
     "modes": "tryby",
     "user": "profil",
     "settings": "ustawienia",
-    "gameboard": "",
     "gamesettings": "ustawienia gry",
-    "scores": "wynik"
+    "scores": "wynik",
+    "game": "pytanie",
+    "help": "pomoc",
+    "about": "o grze"
   },
   "modes": {
     "random": ["losowy", "losowy"],

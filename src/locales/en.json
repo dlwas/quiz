@@ -16,9 +16,11 @@
     "modes": "modes",
     "user": "user",
     "settings": "settings",
-    "gameboard": "gameboard",
     "gamesettings": "game settings",
-    "scores": "scores"
+    "scores": "scores",
+    "game": "question",
+    "help": "help",
+    "about": "about game"
   },
   "modes": {
     "random": ["random", "random"],

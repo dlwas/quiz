@@ -1,4 +1,4 @@
-html[data-theme='dark'] {
+/* html[data-theme='dark'] {
   --background-color: hsl(207, 26%, 17%);
   --text-color: hsl(0, 0%, 100%);
   --elements-color: hsl(209, 23%, 22%);
@@ -10,4 +10,4 @@ html[data-theme='light'] {
   --text-color: hsl(200, 15%, 8%);
   --elements-color: hsl(0, 0%, 100%);
   --input-background: hsl(0, 0%, 52%);
-}
+} */

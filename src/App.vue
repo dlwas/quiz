@@ -1,5 +1,5 @@
 <template>
-  <div class="z-1 fixed">
+  <div class="z-1 fixed ">
     <Icon name="bg" class="w-screen h-screen m-0" />
   </div>
 
