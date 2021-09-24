@@ -6,11 +6,11 @@ import 'virtual:svg-icons-register'
 import store from './stores'
 import App from './App.vue'
 import './styles/main.css'
-import QrcodeVue from 'qrcode.vue'
 
 import { setByName } from './composable/useNavbar'
 import { setTheme } from './composable/useTheme'
 import { getDefault, stateLang } from './composable/useLang'
+import { conSocket } from './composable/useSocket'
 
 const i18n = createI18n({
   mode: 'composition',
@@ -36,5 +36,5 @@ const app = createApp(App)
 app.use(router)
 app.use(store)
 app.use(i18n)
-app.use(QrcodeVue as keyof object)
+// app.use(conSocket)
 app.mount('#app')
