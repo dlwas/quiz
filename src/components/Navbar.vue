@@ -16,7 +16,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
-import { stateNavbar } from '../composable/useNavbar'
+import { stateNavbar } from '../composables/useNavbar'
 import Icon from '~/components/Icon.vue'
 
 const router = useRouter()

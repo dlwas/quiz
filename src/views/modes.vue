@@ -34,7 +34,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
-import { stateGame, setGameMode } from '../composable/useGame'
+import { stateGame, setGameMode } from '../composables/useGame'
 import Icon from '../components/Icon.vue'
 
 const router = useRouter()

@@ -29,7 +29,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { getRandomInt } from '../composable/useUtils'
+import { getRandomInt } from '../composables/useUtils'
 import Btn from '../components/Btn.vue'
 import Icon from '../components/Icon.vue'
 

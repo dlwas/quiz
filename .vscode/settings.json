@@ -2,8 +2,6 @@
   "files.exclude": {
     "node_modules/": true,
     "dist/": true,
-    ".gitattributes": true,
-    ".gitignore": true,
     ".prettierrc.json": true,
     "package-lock.json": true,
     "postcss.config.js": true,

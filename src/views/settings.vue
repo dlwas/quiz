@@ -21,8 +21,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { stateTheme, setTheme } from '../composable/useTheme'
-import { stateLang, setLang } from '../composable/useLang'
+import { stateTheme, setTheme } from '../composables/useTheme'
+import { stateLang, setLang } from '../composables/useLang'
 import { useI18n } from 'vue-i18n'
 import OptionGroup from '~/components/OptionGroup.vue'
 import Btn from '~/components/Btn.vue'
