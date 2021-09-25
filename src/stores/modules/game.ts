@@ -1,4 +1,4 @@
-import gameState from '../../types/gameTypes'
+import gameState from '../../types/game'
 
 export default {
   namespaced: true,
