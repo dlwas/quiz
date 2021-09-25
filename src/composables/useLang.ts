@@ -1,6 +1,6 @@
 import { reactive, watchEffect } from 'vue'
 import { getStorage, setStorage } from './useLocalStorage'
-import { langTypes } from '../types/langTypes'
+import langTypes from '../types/lang'
 
 import en from '../locales/en.json'
 import pl from '../locales/pl.json'

@@ -1,7 +1,7 @@
 import { reactive, watchEffect } from 'vue'
-import { gameState } from '../types/gameTypes'
+import gameTypes from '../types/game'
 
-export const stateGame = reactive(<gameState.RootObject>{
+export const stateGame = reactive(<gameTypes.RootObject>{
   modes: ['random', 'currency', 'boundarie', 'capital', 'flag'],
   rounds: [10, 15],
   difficulty: ['normal', 'hard'],
@@ -14,7 +14,7 @@ export const stateGame = reactive(<gameState.RootObject>{
   },
 })
 
-export const setSettings = (payload: gameState.Game = stateGame.game): void => {
+export const setSettings = (payload: gameTypes.Game = stateGame.game): void => {
   stateGame.game = payload
 }
 

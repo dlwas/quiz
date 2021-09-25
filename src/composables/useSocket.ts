@@ -1,12 +1,12 @@
 import { reactive, watch } from 'vue'
 import { io } from 'socket.io-client'
 
-const ioAddress = 'http://localhost'
-const ioPort = 3001
+const SERVER_PORT = process.env.SERVER_PORT || 3001
+const defaultUrl = `http://localhost:${SERVER_PORT}/`
 const ioOptions = { transports: ['websocket', 'polling'] }
 
 // TODO: add types
-export const socket = io(`${ioAddress}:${ioPort}`, ioOptions)
+export const socket = io(`${defaultUrl})`, ioOptions)
 export const stateSocket = reactive({
   userId: <null | string>null,
   connected: <boolean>false,

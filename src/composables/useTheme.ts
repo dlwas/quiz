@@ -1,7 +1,7 @@
 import { reactive, watchEffect } from 'vue'
 import { getStorage, setStorage } from './useLocalStorage'
-
-import { themeTypes } from '../types/themeTypes'
+import { addClasses, removeClasses } from './useUtils'
+import themeTypes from '../types/theme'
 
 const storageName = 'settedTheme'
 const storageSetted = getStorage(storageName) || getDefault()
@@ -14,12 +14,9 @@ export const stateTheme = reactive(<themeTypes.RootObject>{
 
 function getName(name: string | boolean): string | undefined {
   if (name) {
-    let results: string = 'null'
+    let results = 'null'
     if (typeof name === 'string') {
       results = name == 'dark' ? 'dark' : 'light'
-    }
-    if (typeof name === 'boolean') {
-      results = name ? 'dark' : 'light'
     }
     return results
   }
@@ -30,17 +27,16 @@ export function getDefault(): string {
   return defaultName ? defaultName : 'dark'
 }
 
-export const setTheme = (payload: string = storageSetted): void => {
+export const setTheme = (payload: string = stateTheme.setted): void => {
   const settedTheme = getName(payload)
-  if (settedTheme) {
+  if (settedTheme && stateTheme.html) {
     stateTheme.setted = settedTheme
-    if (stateTheme.html) {
-      const toggledTheme = getName(settedTheme == 'dark' ? 'light' : 'dark')
-      stateTheme.html.classList.add(settedTheme)
-      stateTheme.html.classList.remove(toggledTheme ? toggledTheme : 'dark')
-      stateTheme.html.dataset.theme = settedTheme
-      setStorage(storageName, settedTheme)
-    }
+    const toggledTheme = stateTheme.setted == 'dark' ? 'light' : 'dark'
+
+    addClasses(stateTheme.html, stateTheme.setted)
+    removeClasses(stateTheme.html, toggledTheme)
+
+    setStorage(storageName, stateTheme.setted)
   }
 }
 

@@ -1,6 +1,6 @@
 import { reactive, watchEffect } from 'vue'
 import { ifKeyExist } from './useUtils'
-import navbarTypes from '../types/navbarTypes'
+import navbarTypes from '../types/navbar'
 
 export const stateNavbar = reactive(<navbarTypes.RootObject>{
   default: 'index',

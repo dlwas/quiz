@@ -7,10 +7,10 @@ import store from './stores'
 import App from './App.vue'
 import './styles/main.css'
 
-import { setByName } from './composable/useNavbar'
-import { setTheme } from './composable/useTheme'
-import { getDefault, stateLang } from './composable/useLang'
-import { conSocket } from './composable/useSocket'
+import { setByName } from './composables/useNavbar'
+import { setTheme } from './composables/useTheme'
+import { getDefault, stateLang } from './composables/useLang'
+// import { conSocket } from './composables/useSocket'
 
 const i18n = createI18n({
   mode: 'composition',
