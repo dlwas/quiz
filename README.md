@@ -7,7 +7,7 @@ https://dlwas-quiz.netlify.app
 https://www.figma.com/proto/vCM901vxptCPonHeEzh7sL/quiz-app?node-id=0%3A1
 
 
-Instalation
+Installation
 ```javascript
 npm i
 ```

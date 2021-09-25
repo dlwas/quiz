@@ -1,6 +1,4 @@
-import { RouteLocationRaw } from "vue-router";
-
-export  declare namespace navbarState {
+export  declare namespace navbarTypes {
   export interface Item {
     leftIcon: string
     leftPath: string | boolean
@@ -21,4 +19,4 @@ export  declare namespace navbarState {
   }
 }
 
-export default navbarState
+export default navbarTypes

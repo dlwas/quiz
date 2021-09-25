@@ -1,4 +1,4 @@
-export declare namespace gameState {
+export declare namespace gameTypes {
   export interface Game {
     mode: string
     rounds: number
@@ -15,4 +15,4 @@ export declare namespace gameState {
   }
 }
 
-export default gameState
+export default gameTypes
