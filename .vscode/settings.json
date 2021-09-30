@@ -6,7 +6,6 @@
     "package-lock.json": true,
     "postcss.config.js": true,
     "START.bat": true,
-    "public": true,
   },
   "workbench.colorTheme": "Default Dark+",
   "workbench.sideBar.location": "right",
