@@ -40,7 +40,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, watch } from 'vue'
+import { computed, watch, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { stateGame, setSettings } from '../composables/useGame'
 import OptionGroup from '~/components/OptionGroup.vue'

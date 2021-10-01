@@ -3,7 +3,7 @@
   <div
     v-if="!stateFetch.loading && stateFetch.error"
     class="flex flex-col gap-y-6 place-items-center text-center">
-    <GameQuestion :question="`${gameData[type]} is ${type} of:`" />
+    <GameQuestion :question="t('mode', { correct: gameData[type], type: t(`modes.${type}[0]`) })" />
     <p
       v-for="(answer, index) in answers"
       :key="index"
@@ -34,7 +34,10 @@ import { useRouter } from 'vue-router'
 import { updateProperty } from '../composables/useNavbar'
 import { stateFetch, fetchData } from '../composables/useFetch'
 import { stateGame } from '../composables/useGame'
-import { clearMarks, setNegative, setPositive } from '../composables/useUtils'
+import { stateLang } from '../composables/useLang'
+import { clearMarks, parseUrlWithArgs, setNegative, setPositive } from '../composables/useUtils'
+
+import { useI18n } from 'vue-i18n'
 
 import GameQuestion from '../components/GameQuestion.vue'
 import Btn from '../components/Btn.vue'
@@ -43,7 +46,9 @@ export default defineComponent({
   name: 'game',
   components: { GameQuestion, Btn },
   setup() {
+    const { t } = useI18n()
     const router = useRouter()
+    const settedLang = ref({ lang: stateLang.setted })
 
     const settings = stateGame.game
     const fetchResults: any = ref({})
@@ -55,24 +60,25 @@ export default defineComponent({
     const answerSelected = ref(false)
     const answerCorrect = ref(null)
 
-    updateProperty('text', `question ${round.value + 1}/${settings.rounds}`)
+    updateProperty('text', t(`routes.game`, { rounds: `${round.value + 1}/${settings.rounds}` }))
 
     onMounted(async () => {
-      let defaultUrl: any = null
+      let baseUrl: any = null
       if (process.env.NODE_ENV === 'production') {
-        defaultUrl = `https://dlwas-quiz-app-backend.herokuapp.com/countries/modes/`
+        baseUrl = `https://dlwas-quiz-backend.herokuapp.com/countries/modes/`
       } else {
-        defaultUrl = `http://localhost:3001/countries/modes/`
+        baseUrl = `http://localhost:3001/countries/modes/`
       }
-      const url = new URL(
-        `${defaultUrl}${settings.mode}?${new URLSearchParams(settings as keyof object)}`
-      )
-      const results = await fetchData(url as keyof object) // data, type
+      const url = parseUrlWithArgs(baseUrl, [settings, settedLang.value])
+      const results = await fetchData(url) // data, type
+
       fetchResults.value = results.data
-      type.value = results.type
+      type.value = results.mode
       gameData.value = results.data[round.value]
       answers.value = results.data[round.value].answers
       answerCorrect.value = results.data[round.value].correct
+
+      console.log(results)
     })
 
     const selectAnswer = (e: any) => {
@@ -101,8 +107,10 @@ export default defineComponent({
           clearMarks(answersElm.value)
           answerSelected.value = false
           round.value++
-
-          updateProperty('text', `question ${round.value + 1}/${settings.rounds}`)
+          updateProperty(
+            'text',
+            t(`routes.game`, { rounds: `${round.value + 1}/${settings.rounds}` })
+          )
         }
       }
     }
@@ -114,6 +122,7 @@ export default defineComponent({
     })
 
     return {
+      t,
       btnNext,
       selectAnswer,
       answerSelected,
@@ -125,3 +134,21 @@ export default defineComponent({
   },
 })
 </script>
+
+<!-- 
+{
+  "mode": "capital",
+  "data": [
+    {
+      "capital": "Freetown",
+      "correct": "Sierra Leone",
+      "answers": [
+        "Panama City",
+        "Victoria",
+        "Singapore",
+        "Suva",
+        "Sierra Leone"
+      ]
+    }
+  ]
+} -->

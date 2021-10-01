@@ -4,14 +4,14 @@
       <span class="text-7xl sm:text-9xl">{{ scored }}</span>
       <span class="text-2xl sm:text-3xl">/ {{ rounds }}</span>
     </div>
-    <Btn class="w-32 mt-5" @click="btnModes">
+    <Btn class="w-auto mt-5" @click="btnModes">
       {{ $t(`button.again`) }}
     </Btn>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { stateGame } from '../composables/useGame'
 import Btn from '../components/Btn.vue'
@@ -22,12 +22,12 @@ export default defineComponent({
   setup() {
     const router = useRouter()
 
+    const scored = stateGame.score.scored
+    const rounds = stateGame.game.rounds
+
     const btnModes = () => {
       router.push('modes')
     }
-
-    const scored = stateGame.score.scored
-    const rounds = stateGame.game.rounds
 
     return {
       btnModes,

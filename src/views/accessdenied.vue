@@ -8,7 +8,7 @@
     <Btn :bg="false" @click="btnClick">
       <Icon name="arrow" color="white" />
       <span class="mx-2">
-        {{ $t('backHome') }}
+        {{ $t('button.backHome') }}
       </span>
     </Btn>
   </div>
