@@ -14,17 +14,23 @@
       bg-grey-darken
       rounded-full
     "
-    :class="{ 'bg-gradient-to-tr from-pink-darken to-pink': bg }"
-  >
+    :class="{ 'bg-gradient-to-tr from-pink-darken to-pink': props.bg }">
     <slot />
   </div>
 </template>
 
-<script lang="ts" setup>
-const props = defineProps({
-  bg: {
-    type: Boolean,
-    default: true,
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
+export default defineComponent({
+  name: 'Btn',
+  props: {
+    bg: {
+      type: Boolean,
+      default: true,
+    },
+  },
+  setup(props) {
+    return { props }
   },
 })
 </script>
