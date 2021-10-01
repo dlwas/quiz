@@ -70,7 +70,7 @@ export const stateNavbar = reactive(<navbarTypes.RootObject>{
     },
     score: {
       leftIcon: 'times',
-      leftPath: '',
+      leftPath: 'modes',
       rightIcon: 'share',
       rightPath: 'share',
       text: 'score',
