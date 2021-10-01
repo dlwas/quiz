@@ -1,5 +1,5 @@
 <template>
-  <div v-if="stateFetch.loading">Please check your internet connection and try again</div>
+  <!-- <div v-if="stateFetch.loading">Please check your internet connection and try again</div> -->
   <div
     v-if="!stateFetch.loading && stateFetch.error"
     class="flex flex-col gap-y-6 place-items-center text-center">
