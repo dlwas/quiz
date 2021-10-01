@@ -2,15 +2,19 @@ import { reactive, watchEffect } from 'vue'
 import gameTypes from '../types/game'
 
 export const stateGame = reactive(<gameTypes.RootObject>{
-  modes: ['random', 'currency', 'boundarie', 'capital', 'flag'],
-  rounds: [10, 15],
-  difficulty: ['normal', 'hard'],
+  // modes: ['random', 'currency', 'boundarie', 'capital', 'flag'],
+  modes: ['capital'],
+  rounds: [5, 10, 15],
+  difficulty: ['easy', 'normal', 'hard'],
   room: ['solo', 'frend'], // , 'frend'
   game: {
-    mode: '',
+    mode: 'capital',
     rounds: 10,
     difficulty: 'normal',
     room: 'solo',
+  },
+  score: {
+    scored: 0,
   },
 })
 
