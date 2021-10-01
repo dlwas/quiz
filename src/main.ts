@@ -10,7 +10,7 @@ import './styles/main.css'
 import { setByName } from './composables/useNavbar'
 import { setTheme } from './composables/useTheme'
 import { getDefault, stateLang } from './composables/useLang'
-// import { conSocket } from './composables/useSocket'
+import routeGuard from './routeGuard'
 
 const i18n = createI18n({
   mode: 'composition',
@@ -26,10 +26,15 @@ const router = createRouter({
   routes,
 })
 
-router.beforeEach((to, from) => {
+router.beforeEach(async (to, from) => {
   const path = String(to.name)
-  setTheme()
-  setByName(path)
+  const canAccess = await routeGuard(path)
+  if (!canAccess) {
+    return 'accessdenied'
+  } else {
+    setTheme()
+    setByName(path)
+  }
 })
 
 const app = createApp(App)
