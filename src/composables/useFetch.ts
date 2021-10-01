@@ -2,8 +2,12 @@ import { reactive, watchEffect } from 'vue'
 import fetchTypes from '../types/fetch'
 
 const SERVER_PORT = 3001
-const defaultUrl = `http://localhost:${SERVER_PORT}/`
-
+let defaultUrl: any = null
+if (process.env.NODE_ENV === 'production') {
+  defaultUrl = `https://dlwas-quiz-app-backend.herokuapp.com/`
+} else {
+  defaultUrl = `http://localhost:${SERVER_PORT}/`
+}
 export const stateFetch = reactive(<fetchTypes.RootObject>{
   loading: <boolean>false,
   error: {},

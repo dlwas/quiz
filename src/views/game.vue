@@ -58,9 +58,14 @@ export default defineComponent({
     updateProperty('text', `question ${round.value + 1}/${settings.rounds}`)
 
     onMounted(async () => {
+      let defaultUrl: any = null
+      if (process.env.NODE_ENV === 'production') {
+        defaultUrl = `https://dlwas-quiz-app-backend.herokuapp.com/countries/modes/`
+      } else {
+        defaultUrl = `http://localhost:3001/countries/modes/`
+      }
       const url = new URL(
-        `http://localhost:3001/countries/modes/${settings.mode}?` +
-          new URLSearchParams(settings as keyof object)
+        `${defaultUrl}${settings.mode}?${new URLSearchParams(settings as keyof object)}`
       )
       const results = await fetchData(url as keyof object) // data, type
       fetchResults.value = results.data
