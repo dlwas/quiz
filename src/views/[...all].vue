@@ -40,6 +40,6 @@ const props = defineProps({
 const route = useRouter()
 
 const btnClick = () => {
-  route.push('/modes')
+  route.push('/')
 }
 </script>
