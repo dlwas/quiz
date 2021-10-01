@@ -8,11 +8,9 @@
   },
   "dependencies": {
     "qrcode.vue": "^3.3.2",
-    "socket.io-client": "^4.2.0",
     "vue": "^3.2.6",
     "vue-i18n": "^9.1.7",
-    "vue-router": "^4.0.11",
-    "vuex": "^4.0.2"
+    "vue-router": "^4.0.11"
   },
   "devDependencies": {
     "@types/ip": "^1.1.0",
