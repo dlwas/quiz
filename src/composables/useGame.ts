@@ -1,5 +1,7 @@
-import { reactive, watchEffect } from 'vue'
+import { reactive, watchEffect, ref } from 'vue'
 import gameTypes from '../types/game'
+
+
 
 export const stateGame = reactive(<gameTypes.RootObject>{
   // modes: ['random', 'currency', 'boundarie', 'capital', 'flag'],

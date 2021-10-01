@@ -30,6 +30,18 @@ export function clearMarks(nodeList: any) {
   })
 }
 
+export function parseUrl(baseUrl: string): URL {
+  return new URL(baseUrl)
+}
+
+export function parseUrlWithArgs(baseUrl: string, [...args]: any): URL {
+  let results: any = {}
+  args.forEach((elm: any) => {
+    Object.assign(results, elm)
+  })
+  return new URL(`${baseUrl}?${new URLSearchParams(results)}`)
+}
+
 export function getRandomInt(min: number, max: number): number {
   min = Math.ceil(min)
   max = Math.floor(max)

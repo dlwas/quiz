@@ -5,7 +5,7 @@
     </div>
     <span
       class="flex flex-grow justify-center items-center font-second uppercase text-xl text-gold">
-      {{ routeName }}
+      {{ $t(`${routeName}`) }}
     </span>
     <div class="flex flex-none cursor-pointer w-10">
       <Icon @click="rightClick" :name="data.rightIcon" class="w-6 h-6 m-2" />
