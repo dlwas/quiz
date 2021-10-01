@@ -1,27 +1,28 @@
 {
   "notFound": "nie znaleziono",
-  "accessdenied": "brak dostępu",
-  "backHome": "wrócić do domu",
+  "accessdenied": "odmowa dostępu",
   "title": "quiz",
   "subtitle": "countries",
   "button": {
     "challenge": "sprawdź się",
     "play": "graj",
     "next": "następne",
-    "score": "wynik",
-    "again": "ponownie"
+    "score": "punktacja",
+    "again": "zagraj ponownie",
+    "backHome": "powrót"
   },
   "routes": {
     "all": "",
+    "about": "o grze",
+    "accessdenied": "",
+    "game": "pytanie {rounds}",
+    "gamesettings": "ustawienia gry",
+    "help": "pomoc",
     "index": "",
     "modes": "tryby",
-    "user": "profil",
+    "score": "punktacja",
     "settings": "ustawienia",
-    "gamesettings": "ustawienia gry",
-    "scores": "wynik",
-    "game": "pytanie",
-    "help": "pomoc",
-    "about": "o grze"
+    "user": "profil"
   },
   "modes": {
     "random": ["losowy", "losowy"],
@@ -30,6 +31,7 @@
     "capital": ["stolica", "stolice"],
     "flag": ["flaga", "flage"]
   },
+  "mode": "{correct} jest {type}:",
   "difficulties": {
     "easy": "łatwy",
     "normal": "normalny",
@@ -41,9 +43,9 @@
   },
   "modeSubtitles": ["tryb", "zgadnij "],
   "language": "język",
-  "theme": "motyw",
   "english": "angielski",
   "polish": "polski",
+  "theme": "motyw",
   "dark": "ciemny",
   "light": "jasny",
   "rounds": "rundy",

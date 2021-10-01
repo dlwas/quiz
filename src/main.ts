@@ -3,14 +3,14 @@ import { createRouter, createWebHistory } from 'vue-router'
 import { createI18n } from 'vue-i18n'
 import routes from 'virtual:generated-pages'
 import 'virtual:svg-icons-register'
-import store from './stores'
 import App from './App.vue'
 import './styles/main.css'
 
 import { setByName } from './composables/useNavbar'
 import { setTheme } from './composables/useTheme'
 import { getDefault, stateLang } from './composables/useLang'
-import routeGuard from './routeGuard'
+import routeGuard from './guards'
+import { stateGame } from './composables/useGame'
 
 const i18n = createI18n({
   mode: 'composition',
@@ -27,19 +27,23 @@ const router = createRouter({
 })
 
 router.beforeEach(async (to, from) => {
-  const path = String(to.name)
-  const canAccess = await routeGuard(path)
+  const pathTo = String(to.name)
+  const pathFrom = String(from.name)
+  const canAccess = await routeGuard(pathTo)
+
+  if (pathFrom == 'score') {
+    stateGame.score.scored = 0
+  }
+
   if (!canAccess) {
     return 'accessdenied'
   } else {
     setTheme()
-    setByName(path)
+    setByName(pathTo)
   }
 })
 
 const app = createApp(App)
 app.use(router)
-app.use(store)
 app.use(i18n)
-// app.use(conSocket)
 app.mount('#app')

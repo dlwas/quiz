@@ -1,7 +1,6 @@
 {
   "notFound": "not found",
   "accessdenied": "access denied",
-  "backHome": "back to home",
   "title": "quiz",
   "subtitle": "countries",
   "button": {
@@ -9,19 +8,21 @@
     "play": "play",
     "next": "next",
     "score": "score",
-    "again": "again"
+    "again": "play again",
+    "backHome": "back"
   },
   "routes": {
-    "all": "",
-    "index": "",
-    "modes": "modes",
-    "user": "user",
-    "settings": "settings",
+    "all": " ",
+    "about": "about game",
+    "accessdenied": "",
+    "game": "question {rounds}",
     "gamesettings": "game settings",
-    "scores": "scores",
-    "game": "question",
     "help": "help",
-    "about": "about game"
+    "index": " ",
+    "modes": "modes",
+    "score": "score",
+    "settings": "settings",
+    "user": "user"
   },
   "modes": {
     "random": ["random", "random"],
@@ -30,6 +31,7 @@
     "capital": ["capital", "capitals"],
     "flag": ["flag", "flags"]
   },
+  "mode": "{correct} is {type} of:",
   "difficulties": {
     "easy": "easy",
     "normal": "normal",
@@ -41,9 +43,9 @@
   },
   "modeSubtitles": ["mode", "guess the "],
   "language": "language",
-  "theme": "theme",
   "english": "english",
   "polish": "polish",
+  "theme": "theme",
   "dark": "dark",
   "light": "light",
   "rounds": "rounds",
