@@ -16,6 +16,20 @@ export function init(...args: any): void {
   }
 }
 
+export function setPositive(elm: any) {
+  elm.classList.add('bg-green-700', 'bg-opacity-60')
+}
+
+export function setNegative(elm: any) {
+  elm.classList.add('bg-red-700', 'bg-opacity-60')
+}
+
+export function clearMarks(nodeList: any) {
+  Array.from(nodeList).forEach((item: any) => {
+    item.classList.remove('bg-red-700', 'bg-green-700', 'bg-opacity-60')
+  })
+}
+
 export function getRandomInt(min: number, max: number): number {
   min = Math.ceil(min)
   max = Math.floor(max)
