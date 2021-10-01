@@ -5,13 +5,16 @@ export declare namespace gameTypes {
     difficulty: string
     room: string
   }
+  export interface Score {
+    scored: number
+  }
   export interface RootObject {
-    game: Game
     modes: string[]
-    subtitles: string[]
     rounds: number[]
     difficulty: string[]
     room: string[]
+    game: Game
+    score: Score
   }
 }
 
