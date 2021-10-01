@@ -77,8 +77,6 @@ export default defineComponent({
       gameData.value = results.data[round.value]
       answers.value = results.data[round.value].answers
       answerCorrect.value = results.data[round.value].correct
-
-      console.log(results)
     })
 
     const selectAnswer = (e: any) => {

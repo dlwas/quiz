@@ -5,7 +5,7 @@ import { parseUrl } from './useUtils'
 const SERVER_PORT = 3001
 let defaultUrl: any = null
 if (process.env.NODE_ENV === 'production') {
-  defaultUrl = parseUrl(`https://dlwas-quiz-app-backend.herokuapp.com/`)
+  defaultUrl = parseUrl(`https://dlwas-quiz-backend.herokuapp.com/`)
 } else {
   defaultUrl = parseUrl(`http://localhost:${SERVER_PORT}/`)
 }
