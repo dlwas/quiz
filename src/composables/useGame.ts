@@ -6,11 +6,11 @@ export const stateGame = reactive(<gameTypes.RootObject>{
   modes: ['capital'],
   rounds: [5, 10, 15],
   difficulty: ['easy', 'normal', 'hard'],
-  room: ['solo', 'frend'], // , 'frend'
+  room: ['solo', 'frend'],
   game: {
-    mode: 'capital',
-    rounds: 10,
-    difficulty: 'normal',
+    mode: null,
+    rounds: 5,
+    difficulty: 'easy',
     room: 'solo',
   },
   score: {

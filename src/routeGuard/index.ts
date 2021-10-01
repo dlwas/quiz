@@ -4,13 +4,14 @@ export default function routeGuard(name: string): boolean | null {
   // if false -> index
   // else true -> next()
   let results = null
+  const { mode } = stateGame.game
   switch (name) {
-    // case 'score':
-    //   const scored = stateGame.score.scored
-    //   if (scored == 0) {
-    //     results = false
-    //   }
-    //   break
+    case 'score':
+      results = mode != null
+      break
+    case 'gamesettings':
+      results = mode != null
+      break
 
     default:
       results = true

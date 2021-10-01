@@ -94,14 +94,16 @@ export default defineComponent({
     }
 
     const btnNext = () => {
-      if (round.value >= settings.rounds - 1) {
-        router.push('score')
-      } else {
-        clearMarks(answersElm.value)
-        answerSelected.value = false
-        round.value++
+      if (settings.rounds != null) {
+        if (round.value >= settings.rounds - 1) {
+          router.push('score')
+        } else {
+          clearMarks(answersElm.value)
+          answerSelected.value = false
+          round.value++
 
-        updateProperty('text', `question ${round.value + 1}/${settings.rounds}`)
+          updateProperty('text', `question ${round.value + 1}/${settings.rounds}`)
+        }
       }
     }
 

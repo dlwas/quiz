@@ -1,6 +1,6 @@
 export declare namespace gameTypes {
   export interface Game {
-    mode: string
+    mode: string | null
     rounds: number
     difficulty: string
     room: string
