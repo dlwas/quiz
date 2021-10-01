@@ -1,5 +1,12 @@
 module.exports = {
-  purge: ['./*.html', './src/**/*.vue'],
+  purge: {
+    content: ['./*.html', './src/**/*.vue'],
+    safelist: [
+      'bg-red-700',
+      'bg-green-700',
+      'bg-opacity-60',
+    ],
+  },
   darkMode: 'class',
   theme: {
     extend: {
