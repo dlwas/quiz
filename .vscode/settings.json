@@ -18,7 +18,7 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0,
   "liveServer.settings.donotShowInfoMsg": true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
