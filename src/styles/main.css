@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Poppins:wght@500;800&display=swap');
-@import 'theme.css';
 
 @tailwind base;
 @tailwind components;
@@ -17,6 +16,6 @@ html {
 }
 
 body {
-  @apply bg-gray-50	dark:bg-gray-900;
-  @apply text-gray-900 dark:text-gray-50;
+  @apply bg-gray-300	dark:bg-gray-900;
+  @apply text-gray-900 dark:text-gray-300;
 }

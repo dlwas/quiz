@@ -1,33 +1,29 @@
 module.exports = {
   purge: {
     content: ['./*.html', './src/**/*.vue'],
-    safelist: [
-      'bg-red-700',
-      'bg-green-700',
-      'bg-opacity-60',
-    ],
+    safelist: ['bg-red-700', 'bg-green-700', 'bg-opacity-60'],
   },
   darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
-        main: 'Poppins, sans-serif',
-        second: 'Open Sans, sans-serif',
+        'main': 'Poppins, sans-serif',
+        'second': 'Open Sans, sans-serif',
       },
       fontSize: {
-        tiny: '0.6rem',
+        'tiny': '0.6rem',
       },
       colors: {
-        pink: '#A12568',
+        'pink': '#A12568',
         'pink-darken': '#3B185F',
-        gold: '#FEC260',
-        white: '#f5f5f5',
-        grey: '#808080',
-        'grey-darken': '#070707',
+        'gold': '#FEC260',
+        'white': '#f5f5f5',
+        'gray-darken': '#070707',
       },
+      backgroundColor: {},
       screens: {
-        ip: '320px', // iphone
-        sm: '375px',
+        'ip': '320px', // iphone
+        'sm': '375px',
       },
       spacing: {},
     },
