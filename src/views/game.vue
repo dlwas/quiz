@@ -16,8 +16,7 @@
         bg-opacity-0
         border border-pink
         rounded-lg
-        text-left text-md
-        text-gray-darken
+        text-left text-md text-gray-darken
         dark:text-white
         capitalize
       ">

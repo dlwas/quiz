@@ -25,10 +25,8 @@
   },
   "modes": {
     "random": ["random", "random"],
-    "currency": ["currency", "currencies"],
-    "boundarie": ["boundarie", "boundaries"],
     "capital": ["capital", "capitals"],
-    "flag": ["flag", "flags"]
+    "subregion": ["subregion", "subregions"]
   },
   "mode": "{correct} is {type} of:",
   "difficulties": {

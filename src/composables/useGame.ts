@@ -4,8 +4,8 @@ import gameTypes from '../types/game'
 
 
 export const stateGame = reactive(<gameTypes.RootObject>{
-  // modes: ['random', 'currency', 'boundarie', 'capital', 'flag'],
-  modes: ['capital'],
+  // capital | subregion | 
+  modes: ['capital', 'subregion'],
   rounds: [5, 10, 15],
   difficulty: ['easy', 'normal', 'hard'],
   room: ['solo', 'frend'],

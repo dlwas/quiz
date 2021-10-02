@@ -25,10 +25,8 @@
   },
   "modes": {
     "random": ["losowy", "losowy"],
-    "currency": ["waluta", "walute"],
-    "boundarie": ["granica", "granice"],
     "capital": ["stolica", "stolice"],
-    "flag": ["flaga", "flage"]
+    "subregion": ["podregion", "podregiony"]
   },
   "mode": "{correct} jest {type}:",
   "difficulties": {
