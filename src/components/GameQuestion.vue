@@ -6,11 +6,20 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-const props = defineProps({
-  question: {
-    type: String,
-    default: '',
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'GameQuestion',
+  components: {},
+  props: {
+    question: {
+      type: String,
+      default: '',
+    },
+  },
+  setup() {
+    return {}
   },
 })
 </script>

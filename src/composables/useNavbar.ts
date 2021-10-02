@@ -19,6 +19,34 @@ export const stateNavbar = reactive(<navbarTypes.RootObject>{
       rightPath: '',
       text: 'routes.all',
     },
+    about: {
+      leftIcon: 'arrow',
+      leftPath: '/',
+      rightIcon: '',
+      rightPath: '',
+      text: 'routes.about',
+    },
+    accessdenied: {
+      leftIcon: '',
+      leftPath: '',
+      rightIcon: '',
+      rightPath: '',
+      text: 'routes.accessdenied',
+    },
+    game: {
+      leftIcon: 'times',
+      leftPath: 'modes',
+      rightIcon: '',
+      rightPath: '',
+      text: 'routes.game',
+    },
+    gamesettings: {
+      leftIcon: 'arrow',
+      leftPath: 'modes',
+      rightIcon: '',
+      rightPath: '',
+      text: 'routes.gamesettings',
+    },
     index: {
       leftIcon: 'cog',
       leftPath: 'settings',
@@ -33,12 +61,12 @@ export const stateNavbar = reactive(<navbarTypes.RootObject>{
       rightPath: '',
       text: 'routes.modes',
     },
-    user: {
-      leftIcon: 'arrow',
+    score: {
+      leftIcon: 'times',
       leftPath: 'modes',
-      rightIcon: '',
-      rightPath: '',
-      text: 'routes.user',
+      rightIcon: 'share',
+      rightPath: 'share',
+      text: 'routes.score',
     },
     settings: {
       leftIcon: 'arrow',
@@ -47,41 +75,13 @@ export const stateNavbar = reactive(<navbarTypes.RootObject>{
       rightPath: '',
       text: 'routes.settings',
     },
-    game: {
-      leftIcon: 'times',
-      leftPath: 'modes',
-      rightIcon: '',
-      rightPath: '',
-      text: 'routes.game',
-    },
-    gamesettings: {
-      leftIcon: 'arrow',
-      leftPath: 'modes',
-      rightIcon: 'question',
-      rightPath: 'help',
-      text: 'routes.settings',
-    },
-    help: {
-      leftIcon: 'arrow',
-      leftPath: 'gamesettings',
-      rightIcon: '',
-      rightPath: '',
-      text: 'routes.help',
-    },
-    score: {
-      leftIcon: 'times',
-      leftPath: 'modes',
-      rightIcon: 'share',
-      rightPath: 'share',
-      text: 'routes.score',
-    },
-    about: {
+    share: {
       leftIcon: 'arrow',
       leftPath: '/',
       rightIcon: '',
       rightPath: '',
-      text: 'routes.about',
-    },
+      text: 'routes.share',
+    }
   },
 })
 

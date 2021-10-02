@@ -9,13 +9,21 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts">
+import { defineComponent } from 'vue'
 import Label from '~/components/Label.vue'
 
-const props = defineProps({
-  text: {
-    type: String,
-    default: 'null',
+export default defineComponent({
+  name: 'OptionGroup',
+  components: { Label },
+  props: {
+    text: {
+      type: String,
+      default: 'null',
+    },
+  },
+  setup() {
+    return {}
   },
 })
 </script>
