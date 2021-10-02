@@ -17,12 +17,11 @@
     "accessdenied": "",
     "game": "question {rounds}",
     "gamesettings": "game settings",
-    "help": "help",
     "index": " ",
     "modes": "modes",
     "score": "score",
     "settings": "settings",
-    "user": "user"
+    "share": "share"
   },
   "modes": {
     "random": ["random", "random"],

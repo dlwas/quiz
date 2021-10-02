@@ -17,12 +17,11 @@
     "accessdenied": "",
     "game": "pytanie {rounds}",
     "gamesettings": "ustawienia gry",
-    "help": "pomoc",
     "index": "",
     "modes": "tryby",
     "score": "punktacja",
     "settings": "ustawienia",
-    "user": "profil"
+    "share": "udostępnij"
   },
   "modes": {
     "random": ["losowy", "losowy"],
