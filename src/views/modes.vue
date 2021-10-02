@@ -31,18 +31,27 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { computed } from 'vue'
+<script lang="ts">
+import { defineComponent, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { stateGame, setGameMode } from '../composables/useGame'
 import Icon from '../components/Icon.vue'
 
-const router = useRouter()
+export default defineComponent({
+  name: 'modes',
+  components: { Icon },
+  props: {},
+  setup() {
+    const router = useRouter()
 
-const modes = computed(() => stateGame.modes)
+    const modes = computed(() => stateGame.modes)
 
-const bntSelectMode = (selectedMode: string) => {
-  setGameMode(selectedMode)
-  router.push('/gamesettings')
-}
+    const bntSelectMode = (selectedMode: string) => {
+      setGameMode(selectedMode)
+      router.push('/gamesettings')
+    }
+
+    return { modes, bntSelectMode }
+  },
+})
 </script>

@@ -5,12 +5,12 @@
         {{ $t('accessdenied') }}
       </p>
     </div>
-    <Btn :bg="false" @click="btnClick">
+    <Button :bg="false" @click="btnClick">
       <Icon name="arrow" color="white" />
       <span class="mx-2">
         {{ $t('button.backHome') }}
       </span>
-    </Btn>
+    </Button>
   </div>
 </template>
 
@@ -19,11 +19,11 @@ import { defineComponent } from 'vue'
 import { useRouter } from 'vue-router'
 
 import Icon from '~/components/Icon.vue'
-import Btn from '~/components/Btn.vue'
+import Button from '~/components/Button.vue'
 
 export default defineComponent({
-  name: 'Access Denied',
-  components: { Icon, Btn },
+  name: 'accessdenied',
+  components: { Icon, Button },
   setup() {
     const route = useRouter()
 

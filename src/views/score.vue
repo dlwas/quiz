@@ -1,24 +1,25 @@
 <template>
   <div class="h-2/3 flex flex-col gap-y-6 place-items-center place-content-center text-center">
-    <div class="flex justify-center place-items-end text-gold">
+    <ScoreResults>
       <span class="text-7xl sm:text-9xl">{{ scored }}</span>
       <span class="text-2xl sm:text-3xl">/ {{ rounds }}</span>
-    </div>
-    <Btn class="w-auto mt-5" @click="btnModes">
+    </ScoreResults>
+    <Button class="w-auto mt-5" @click="btnModes">
       {{ $t(`button.again`) }}
-    </Btn>
+    </Button>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent } from 'vue'
 import { useRouter } from 'vue-router'
 import { stateGame } from '../composables/useGame'
-import Btn from '../components/Btn.vue'
+import ScoreResults from '../components/ScoreResults.vue'
+import Button from '../components/Button.vue'
 
 export default defineComponent({
   name: 'Score',
-  components: { Btn },
+  components: { ScoreResults, Button },
   setup() {
     const router = useRouter()
 

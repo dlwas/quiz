@@ -16,20 +16,23 @@
         bg-opacity-0
         border border-pink
         rounded-lg
-        text-white text-left text-md
+        text-left text-md
+        text-gray-darken
+        dark:text-white
         capitalize
       ">
       {{ answer }}
     </p>
-    <Btn class="w-52" :bg="answerSelected" @click="btnNext">
+    <Button class="w-52" :bg="answerSelected" @click="btnNext">
       {{ $t('button.next') }}
-    </Btn>
+    </Button>
   </div>
 </template>
 
 <script lang="ts">
 import { ref, onMounted, defineComponent, watch } from 'vue'
 import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 
 import { updateProperty } from '../composables/useNavbar'
 import { stateFetch, fetchData } from '../composables/useFetch'
@@ -37,14 +40,12 @@ import { stateGame } from '../composables/useGame'
 import { stateLang } from '../composables/useLang'
 import { clearMarks, parseUrlWithArgs, setNegative, setPositive } from '../composables/useUtils'
 
-import { useI18n } from 'vue-i18n'
-
 import GameQuestion from '../components/GameQuestion.vue'
-import Btn from '../components/Btn.vue'
+import Button from '../components/Button.vue'
 
 export default defineComponent({
   name: 'game',
-  components: { GameQuestion, Btn },
+  components: { GameQuestion, Button },
   setup() {
     const { t } = useI18n()
     const router = useRouter()
@@ -98,7 +99,7 @@ export default defineComponent({
     }
 
     const btnNext = () => {
-      if (settings.rounds != null) {
+      if (settings.rounds != null && answerSelected.value == true) {
         if (round.value >= settings.rounds - 1) {
           router.push('score')
         } else {
@@ -132,21 +133,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<!-- 
-{
-  "mode": "capital",
-  "data": [
-    {
-      "capital": "Freetown",
-      "correct": "Sierra Leone",
-      "answers": [
-        "Panama City",
-        "Victoria",
-        "Singapore",
-        "Suva",
-        "Sierra Leone"
-      ]
-    }
-  ]
-} -->
