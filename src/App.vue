@@ -1,6 +1,6 @@
 <template>
-  <div class="z-1 fixed ">
-    <Icon name="bg" class="w-screen h-screen m-0" />
+  <div class="z-1 fixed">
+    <Icon :name="`bg-${stateTheme.setted}`" class="w-screen h-screen m-0" />
   </div>
 
   <div class="absolute flex place-content-center w-full h-full">
@@ -12,7 +12,20 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
+import { stateTheme } from './composables/useTheme'
+
 import Icon from '~/components/Icon.vue'
 import Navbar from '~/components/Navbar.vue'
+
+export default defineComponent({
+  name: 'App',
+  components: { Icon, Navbar },
+  setup() {
+    return {
+      stateTheme,
+    }
+  },
+})
 </script>
