@@ -6,12 +6,12 @@ export default function routeGuard(name: string): boolean | null {
   let results = null
   const { mode } = stateGame.game
   switch (name) {
-    case 'score':
-      results = mode != null
-      break
-    case 'gamesettings':
-      results = mode != null
-      break
+    // case 'score':
+    //   results = mode != null
+    //   break
+    // case 'gamesettings':
+    //   results = mode != null
+    //   break
 
     default:
       results = true

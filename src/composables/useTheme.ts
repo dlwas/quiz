@@ -24,7 +24,7 @@ function getName(name: string | boolean): string | undefined {
 
 export function getDefault(): string {
   const defaultName = getName(window.matchMedia('(prefers-color-scheme: dark)').matches)
-  return defaultName ? defaultName : 'dark'
+  return defaultName ? defaultName : 'light'
 }
 
 export const setTheme = (payload: string = stateTheme.setted): void => {
