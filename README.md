@@ -3,21 +3,21 @@
 ## Demo
 https://dlwas-quiz.netlify.app
 
-### Design preview
-https://www.figma.com/proto/vCM901vxptCPonHeEzh7sL/quiz-app?node-id=0%3A1
+## Technologies
+- Stack: JavaScript, TypeScript, Vue.js 3 (Composition API), Vue Router Next, i18n
+- Backend: https://github.com/dlwas/quiz-backend
 
+## Features
+- Modes: Capital, Subregion (of country)
+- Round selection: 5 / 10 / 15
+- Difficulty level selection: Easy / Normal / Hard
+- Theme: Dark / Light
+- Locales: English / Polish (in progress)
 
-Installation
-```javascript
-npm i
-```
+Usage
+'''javascript
+npm i //instalation
 
-Usage for dev
-```javascript
-npm start
-```
-
-Usage for build
-```javascript
-npm run build
-```
+npm start // dev
+npm run build // build
+'''
