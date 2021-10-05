@@ -24,8 +24,8 @@ import { defineComponent, computed } from 'vue'
 import { stateTheme, setTheme } from '../composables/useTheme'
 import { stateLang, setLang } from '../composables/useLang'
 import { useI18n } from 'vue-i18n'
-import OptionGroup from '~/components/OptionGroup.vue'
-import Button from '~/components/Button.vue'
+import OptionGroup from '../components/OptionGroup.vue'
+import Button from '../components/Button.vue'
 
 export default defineComponent({
   name: 'settings',

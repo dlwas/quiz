@@ -1,5 +1,5 @@
 <template>
-  <!-- <div v-if="stateFetch.loading">Please check your internet connection and try again</div> -->
+  <Placeholder :loading="stateFetch.loading" />
   <div
     v-if="!stateFetch.loading && stateFetch.error"
     class="flex flex-col gap-y-6 place-items-center text-center">
@@ -41,10 +41,11 @@ import { clearMarks, parseUrlWithArgs, setNegative, setPositive } from '../compo
 
 import GameQuestion from '../components/GameQuestion.vue'
 import Button from '../components/Button.vue'
+import Placeholder from '../components/Placeholder.vue'
 
 export default defineComponent({
   name: 'game',
-  components: { GameQuestion, Button },
+  components: { GameQuestion, Button, Placeholder },
   setup() {
     const { t } = useI18n()
     const router = useRouter()
