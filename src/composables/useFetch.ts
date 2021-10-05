@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === 'production') {
 } else {
   defaultUrl = parseUrl(`http://localhost:${SERVER_PORT}/`)
 }
-export const stateFetch = reactive(<fetchTypes.RootObject>{
+export const stateFetch = reactive(<fetchTypes>{
   loading: <boolean>false,
   error: {},
   data: null,

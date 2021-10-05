@@ -9,7 +9,7 @@ import pl from '../locales/pl.json'
 const storageName = 'settedLanguage'
 const storageSetted = getStorage(storageName) || getDefault()
 
-export const stateLang = reactive(<langTypes.RootObject>{
+export const stateLang = reactive(<langTypes>{
   default: getDefault(),
   setted: storageSetted,
   locales: {

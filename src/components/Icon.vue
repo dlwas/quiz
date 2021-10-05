@@ -16,8 +16,9 @@ export default defineComponent({
       default: 'icon',
     },
     name: {
-      type: String || Boolean,
+      type: String,
       required: true,
+      default: 'icon',
     },
     color: {
       type: String,

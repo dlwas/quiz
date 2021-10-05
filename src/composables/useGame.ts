@@ -1,10 +1,8 @@
 import { reactive, watchEffect, ref } from 'vue'
-import gameTypes from '../types/game'
+import gameTypes, { Game } from '../types/game'
 
-
-
-export const stateGame = reactive(<gameTypes.RootObject>{
-  // capital | subregion | 
+export const stateGame = reactive(<gameTypes>{
+  // capital | subregion |
   modes: ['capital', 'subregion'],
   rounds: [5, 10, 15],
   difficulty: ['easy', 'normal', 'hard'],
@@ -20,7 +18,7 @@ export const stateGame = reactive(<gameTypes.RootObject>{
   },
 })
 
-export const setSettings = (payload: gameTypes.Game = stateGame.game): void => {
+export const setSettings = (payload: Game = stateGame.game): void => {
   stateGame.game = payload
 }
 

@@ -6,7 +6,7 @@ import themeTypes from '../types/theme'
 const storageName = 'settedTheme'
 const storageSetted = getStorage(storageName) || getDefault()
 
-export const stateTheme = reactive(<themeTypes.RootObject>{
+export const stateTheme = reactive(<themeTypes>{
   default: getDefault(),
   setted: storageSetted,
   html: document.querySelector('html'),

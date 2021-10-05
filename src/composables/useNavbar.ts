@@ -1,8 +1,8 @@
 import { reactive, watchEffect } from 'vue'
 import { ifKeyExist } from './useUtils'
-import navbarTypes from '../types/navbar'
+import navbarTypes, { Item } from '../types/navbar'
 
-export const stateNavbar = reactive(<navbarTypes.RootObject>{
+export const stateNavbar = reactive(<navbarTypes>{
   default: 'index',
   data: {
     leftIcon: 'cog',
@@ -81,7 +81,7 @@ export const stateNavbar = reactive(<navbarTypes.RootObject>{
       rightIcon: '',
       rightPath: '',
       text: 'routes.share',
-    }
+    },
   },
 })
 
