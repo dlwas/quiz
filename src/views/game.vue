@@ -1,30 +1,33 @@
 <template>
-  <Placeholder :loading="stateFetch.loading" />
-  <div
-    v-if="!stateFetch.loading && stateFetch.error"
-    class="flex flex-col gap-y-6 place-items-center text-center">
-    <GameQuestion :question="t('mode', { correct: gameData[type], type: t(`modes.${type}[0]`) })" />
-    <p
-      v-for="(answer, index) in answers"
-      :key="index"
-      @click="selectAnswer"
-      class="
-        answers
-        w-72
-        pl-6
-        py-3
-        bg-opacity-0
-        border border-pink
-        rounded-lg
-        text-left text-md text-gray-darken
-        dark:text-white
-        capitalize
-      ">
-      {{ answer }}
-    </p>
-    <Button class="w-52" :bg="answerSelected" @click="btnNext">
-      {{ $t('button.next') }}
-    </Button>
+  <div>
+    <Placeholder :loading="stateFetch.loading" />
+    <div
+      v-if="!stateFetch.loading && stateFetch.error"
+      class="flex flex-col gap-y-6 place-items-center text-center">
+      <GameQuestion
+        :question="t('mode', { correct: gameData[type], type: t(`modes.${type}[0]`) })" />
+      <p
+        v-for="(answer, index) in answers"
+        :key="index"
+        @click="selectAnswer"
+        class="
+          answers
+          w-72
+          pl-6
+          py-3
+          bg-opacity-0
+          border border-pink
+          rounded-lg
+          text-left text-md text-gray-darken
+          dark:text-white
+          capitalize
+        ">
+        {{ answer }}
+      </p>
+      <Button class="w-52" :bg="answerSelected" @click="btnNext">
+        {{ $t('button.next') }}
+      </Button>
+    </div>
   </div>
 </template>
 
