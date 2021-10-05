@@ -20,7 +20,7 @@ export const stateLang = reactive(<langTypes.RootObject>{
 
 export function getDefault(): string {
   const defaultLang = navigator.language
-  return defaultLang.length === 5 ? defaultLang.slice(0, 2) : defaultLang
+  return defaultLang.length === 5 ? defaultLang.slice(0, 2) : defaultLang || 'en'
 }
 
 export const setLang = (payload: string = storageSetted): void => {
