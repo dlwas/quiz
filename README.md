@@ -2,7 +2,7 @@
 
 ### App in progress
 
-## Demo
+## Live
 
 https://dlwas-quiz.netlify.app
 
