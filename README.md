@@ -28,6 +28,8 @@ https://dlwas-quiz.netlify.app
 
 ## Usage
 
-Instalation: `npm i`.
-Dev: `npm start`.
+Installation: `npm i`
+
+Dev: `npm start`
+
 Build: `npm run build`.
