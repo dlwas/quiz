@@ -25,7 +25,7 @@
 import { defineComponent, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { stateNavbar } from '../composables/useNavbar'
-import Icon from '~/components/Icon.vue'
+import Icon from '../components/Icon.vue'
 
 export default defineComponent({
   name: 'Navbar',

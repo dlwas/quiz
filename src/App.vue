@@ -4,7 +4,7 @@
   </div>
 
   <div class="absolute flex place-content-center w-full h-full">
-    <div class="absolute w-full h-full">
+    <div class="absolute w-full h-full mobile-view">
       <!-- max-w-screen-sm -->
       <Navbar />
       <router-view v-slot="{ Component, route }">
