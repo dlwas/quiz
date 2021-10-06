@@ -34,18 +34,11 @@ export default defineComponent({
   setup() {
     const router = useRouter()
 
-    //     difficulty: "easy"
-    // mode: "subregion"
-    // room: "solo"
-    // rounds: 5
-
     const scored = stateGame.score.scored
     const rounds = stateGame.game.rounds
     const difficulty = stateGame.game.difficulty
     const mode = stateGame.game.mode
     const selectedAnswers = stateGame.score.selectedAnswers
-
-    console.log(stateGame)
 
     const btnModes = () => {
       router.push('modes')
