@@ -18,6 +18,7 @@ router.beforeEach(async (to, from) => {
 
   if (pathFrom == 'score') {
     stateGame.score.scored = 0
+    stateGame.score.selectedAnswers = []
   }
 
   if (!canAccess) {

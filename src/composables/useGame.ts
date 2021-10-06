@@ -15,6 +15,7 @@ export const stateGame = reactive(<gameTypes>{
   },
   score: {
     scored: 0,
+    selectedAnswers: []
   },
 })
 

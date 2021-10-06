@@ -28,7 +28,10 @@
     "capital": ["capital", "capitals"],
     "subregion": ["subregion", "subregions"]
   },
-  "mode": "{correct} is {type} of:",
+  "mode": {
+    "capital": " is the capital of:",
+    "subregion": " is located at:"
+  },
   "difficulties": {
     "easy": "easy",
     "normal": "normal",

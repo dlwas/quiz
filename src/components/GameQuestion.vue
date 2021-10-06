@@ -1,7 +1,12 @@
 <template>
   <div class="w-72">
-    <h3 class="uppercase text-xl font-bold">
-      {{ question }}
+    <h3 class="uppercase text-xl">
+      <span class="font-bold text-pink-darken dark:text-gold">
+        {{ correct }}
+      </span>
+      <span>
+        {{ $t(`mode.${type}`) }}
+      </span>
     </h3>
   </div>
 </template>
@@ -11,9 +16,12 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'GameQuestion',
-  components: {},
   props: {
-    question: {
+    correct: {
+      type: String,
+      default: '',
+    },
+    type: {
       type: String,
       default: '',
     },

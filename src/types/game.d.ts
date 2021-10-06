@@ -4,8 +4,14 @@ export interface Game {
   difficulty: string
   room: string
 }
+export interface SelectedAnswersItem {
+  correct: string
+  negative: string | null
+  type: string | null
+}
 export interface Score {
   scored: number
+  selectedAnswers: SelectedAnswersItem[]
 }
 export interface gameTypes {
   modes: string[]

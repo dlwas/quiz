@@ -4,8 +4,7 @@
     <div
       v-if="!stateFetch.loading && stateFetch.error"
       class="flex flex-col gap-y-6 place-items-center text-center">
-      <GameQuestion
-        :question="t('mode', { correct: gameData[type], type: t(`modes.${type}[0]`) })" />
+      <GameQuestion :correct="gameData[type]" :type="type" />
       <p
         v-for="(answer, index) in answers"
         :key="index"
@@ -64,6 +63,8 @@ export default defineComponent({
     const answerSelected = ref(false)
     const answerCorrect = ref(null)
 
+    const answersSelcted: any = ref([])
+
     updateProperty('text', t(`routes.game`, { rounds: `${round.value + 1}/${settings.rounds}` }))
 
     onMounted(async () => {
@@ -85,6 +86,11 @@ export default defineComponent({
 
     const selectAnswer = (e: any) => {
       const elm = e.srcElement
+      const tempSelected = {
+        type: type,
+        correct: '',
+        negative: '' || null,
+      }
       answersElm.value = document.querySelectorAll('.answers')
       if (!answerSelected.value) {
         const correctElm: any = Array.from(answersElm.value).find(
@@ -92,13 +98,18 @@ export default defineComponent({
         )
         if (answerCorrect.value == elm.innerHTML) {
           setPositive(correctElm)
+          tempSelected.correct = correctElm.innerHTML
+          tempSelected.negative = null
           stateGame.score.scored += 1
         } else {
           setNegative(elm)
           setPositive(correctElm)
+          tempSelected.correct = correctElm.innerHTML
+          tempSelected.negative = elm.innerHTML
         }
       }
       answerSelected.value = true
+      stateGame.score.selectedAnswers.push(tempSelected)
     }
 
     const btnNext = () => {

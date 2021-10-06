@@ -28,7 +28,10 @@
     "capital": ["stolica", "stolice"],
     "subregion": ["podregion", "podregiony"]
   },
-  "mode": "{correct} jest {type}:",
+  "mode": {
+    "capital": " jest stolicą:",
+    "subregion": " znajduje się w:"
+  },
   "difficulties": {
     "easy": "łatwy",
     "normal": "normalny",

@@ -32,4 +32,4 @@ Installation: `npm i`
 
 Dev: `npm start`
 
-Build: `npm run build`.
+Build: `npm run build`
