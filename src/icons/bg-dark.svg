@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 414 736">
-  <rect width="306.873" height="306.873" x="414.271" y="289.707" fill="url(#a)" fill-opacity=".16" rx="40" transform="rotate(-160.5 414.271 289.707)"/>
-  <rect width="306.873" height="306.873" x="119.682" y="461" fill="url(#b)" fill-opacity=".16" rx="40" transform="rotate(53.5 119.682 461)"/>
-  <defs>
-    <linearGradient id="a" x1="646.765" x2="567.707" y1="-408.086" y2="596.58" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#fff"/>
-      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="b" x1="352.176" x2="273.118" y1="-236.793" y2="767.873" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#fff"/>
-      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 414 736"><rect width="306.873" height="306.873" x="414.271" y="289.707" fill="url(#a)" fill-opacity=".16" rx="40" transform="rotate(-160.5 414.271 289.707)"/><rect width="306.873" height="306.873" x="119.682" y="461" fill="url(#b)" fill-opacity=".16" rx="40" transform="rotate(53.5 119.682 461)"/><defs><linearGradient id="a" x1="646.765" x2="567.707" y1="-408.086" y2="596.58" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="b" x1="352.176" x2="273.118" y1="-236.793" y2="767.873" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs></svg>
