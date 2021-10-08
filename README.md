@@ -26,6 +26,11 @@ https://dlwas-quiz.netlify.app
 - Theme: `Dark` / `Light`.
 - Locales: `English` / `Polish` (in progress).
 
+## Google Analytics
+
+- Measuring traffic
+- Measuring score by url
+
 ## Usage
 
 Installation: `npm i`
