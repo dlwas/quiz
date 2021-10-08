@@ -63,8 +63,6 @@ export default defineComponent({
     const answerSelected = ref(false)
     const answerCorrect = ref(null)
 
-    const answersSelcted: any = ref([])
-
     updateProperty('text', t(`routes.game`, { rounds: `${round.value + 1}/${settings.rounds}` }))
 
     onMounted(async () => {
@@ -88,6 +86,7 @@ export default defineComponent({
       const elm = e.srcElement
       const tempSelected = {
         type: type,
+        item: '',
         correct: '',
         negative: '' || null,
       }
@@ -96,14 +95,17 @@ export default defineComponent({
         const correctElm: any = Array.from(answersElm.value).find(
           (elm: any) => elm.innerHTML == answerCorrect.value
         )
+
         if (answerCorrect.value == elm.innerHTML) {
           setPositive(correctElm)
+          tempSelected.item = gameData.value[type.value]
           tempSelected.correct = correctElm.innerHTML
           tempSelected.negative = null
           stateGame.score.scored += 1
         } else {
           setNegative(elm)
           setPositive(correctElm)
+          tempSelected.item = gameData.value[type.value]
           tempSelected.correct = correctElm.innerHTML
           tempSelected.negative = elm.innerHTML
         }

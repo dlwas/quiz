@@ -2,8 +2,7 @@ import { reactive, watchEffect, ref } from 'vue'
 import gameTypes, { Game } from '../types/game'
 
 export const stateGame = reactive(<gameTypes>{
-  // capital | subregion |
-  modes: ['capital', 'subregion'],
+  modes: ['capital', 'subregion', 'area', 'population'],
   rounds: [5, 10, 15],
   difficulty: ['easy', 'normal', 'hard'],
   room: ['solo', 'frend'],
@@ -15,7 +14,7 @@ export const stateGame = reactive(<gameTypes>{
   },
   score: {
     scored: 0,
-    selectedAnswers: []
+    selectedAnswers: [],
   },
 })
 
