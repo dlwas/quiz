@@ -16,7 +16,7 @@
       ">
       <Icon :name="`card-${modeName}`" class="my-0 mx-0 w-full h-full" />
       <div class="absolute text-center uppercase">
-        <h3 class="font-main font-extrabold text-gold text-xl sm:text-xl">
+        <h3 class="font-main font-extrabold text-gold text-sm sm:text-lg">
           {{ $t(`modes.${modeName}[0]`) }}
         </h3>
         <p class="font-second font-medium text-white text-tiny sm:text-xs">
