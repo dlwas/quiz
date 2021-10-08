@@ -124,7 +124,7 @@ export default defineComponent({
       if (settings.rounds != null && answerSelected.value == true) {
         if (round.value >= settings.rounds - 1) {
           const queries = getAnsweredQueries(toRaw(stateGame.score.selectedAnswers) as keyof object)
-          router.push({ name: 'score', query: queries as keyof object })
+          router.push({ name: 'score', query: { answers: queries as keyof object } })
         } else {
           clearMarks(answersElm.value)
           answerSelected.value = false
