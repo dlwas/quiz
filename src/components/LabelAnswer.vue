@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-for="(answer, index) in answers" :key="index" class="mb-5">
-      <OptionGroup :text="`${answer.correct}  ${$t(`mode.${answer.type}`)}`">
+      <OptionGroup :text="`${answer.item}  ${$t(`mode.${answer.type}`)}`">
         <p
           v-if="answer.correct"
           class="
