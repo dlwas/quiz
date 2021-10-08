@@ -31,7 +31,7 @@
 </template>
 
 <script lang="ts">
-import { ref, onMounted, defineComponent, watch } from 'vue'
+import { ref, onMounted, defineComponent, watch, toRaw, unref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 
@@ -39,7 +39,13 @@ import { updateProperty } from '../composables/useNavbar'
 import { stateFetch, fetchData } from '../composables/useFetch'
 import { stateGame } from '../composables/useGame'
 import { stateLang } from '../composables/useLang'
-import { clearMarks, parseUrlWithArgs, setNegative, setPositive } from '../composables/useUtils'
+import {
+  clearMarks,
+  getAnsweredQueries,
+  parseUrlWithArgs,
+  setNegative,
+  setPositive,
+} from '../composables/useUtils'
 
 import GameQuestion from '../components/GameQuestion.vue'
 import Button from '../components/Button.vue'
@@ -85,10 +91,10 @@ export default defineComponent({
     const selectAnswer = (e: any) => {
       const elm = e.srcElement
       const tempSelected = {
-        type: type,
+        type: unref(type),
         item: '',
         correct: '',
-        negative: '' || null,
+        negative: '',
       }
       answersElm.value = document.querySelectorAll('.answers')
       if (!answerSelected.value) {
@@ -100,7 +106,7 @@ export default defineComponent({
           setPositive(correctElm)
           tempSelected.item = gameData.value[type.value]
           tempSelected.correct = correctElm.innerHTML
-          tempSelected.negative = null
+          tempSelected.negative = 'null'
           stateGame.score.scored += 1
         } else {
           setNegative(elm)
@@ -117,7 +123,8 @@ export default defineComponent({
     const btnNext = () => {
       if (settings.rounds != null && answerSelected.value == true) {
         if (round.value >= settings.rounds - 1) {
-          router.push('score')
+          const queries = getAnsweredQueries(toRaw(stateGame.score.selectedAnswers) as keyof object)
+          router.push({ name: 'score', query: queries as keyof object })
         } else {
           clearMarks(answersElm.value)
           answerSelected.value = false

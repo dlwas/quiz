@@ -18,7 +18,7 @@
           {{ answer.correct }}
         </p>
         <p
-          v-if="answer.negative"
+          v-if="answer.negative && answer.negative != 'null'"
           class="
             w-72
             pl-6
@@ -41,8 +41,6 @@
 import { defineComponent } from 'vue'
 import OptionGroup from '../components/OptionGroup.vue'
 import GameQuestion from '../components/GameQuestion.vue'
-
-import { SelectedAnswersItem } from '../types/game'
 
 export default defineComponent({
   name: 'LabelAnswer',

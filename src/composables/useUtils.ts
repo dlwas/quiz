@@ -42,6 +42,14 @@ export function parseUrlWithArgs(baseUrl: string, [...args]: any): URL {
   return new URL(`${baseUrl}?${new URLSearchParams(results)}`)
 }
 
+export function getAnsweredQueries(array: []): string[] {
+  const queries = []
+  for (const [key, value] of Object.entries(array)) {
+    queries.push(`${Object.values(value)}`)
+  }
+  return queries
+}
+
 export function getRandomInt(min: number, max: number): number {
   min = Math.ceil(min)
   max = Math.floor(max)
