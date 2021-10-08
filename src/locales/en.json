@@ -26,11 +26,15 @@
   "modes": {
     "random": ["random", "random"],
     "capital": ["capital", "capitals"],
-    "subregion": ["subregion", "subregions"]
+    "subregion": ["subregion", "subregions"],
+    "area": ["area", "areas"],
+    "population": ["population", "populations"]
   },
   "mode": {
     "capital": " is the capital of:",
-    "subregion": " is located at:"
+    "subregion": " is located at:",
+    "area": " has an area of: (in km²)",
+    "population": " has populations:"
   },
   "difficulties": {
     "easy": "easy",

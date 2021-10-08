@@ -26,11 +26,15 @@
   "modes": {
     "random": ["losowy", "losowy"],
     "capital": ["stolica", "stolice"],
-    "subregion": ["podregion", "podregiony"]
+    "subregion": ["podregion", "podregiony"],
+    "area": ["powierzchnia", "powierzchnie"],
+    "population": ["populacja", "populacje"]
   },
   "mode": {
     "capital": " jest stolicą:",
-    "subregion": " znajduje się w:"
+    "subregion": " znajduje się w:",
+    "area": " ma powierzchnię: (w km²)",
+    "population": " ma populacje:"
   },
   "difficulties": {
     "easy": "łatwy",
