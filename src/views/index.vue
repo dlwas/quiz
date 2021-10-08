@@ -4,7 +4,7 @@
       <p>{{ $t('title') }}</p>
       <p>{{ $t('subtitle') }}</p>
     </IndexTitle>
-    <Button class="w-52" @click="btnClick">
+    <Button class="w-auto" @click="btnClick">
       {{ $t('button.challenge') }}
     </Button>
   </div>
