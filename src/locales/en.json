@@ -33,7 +33,7 @@
   "mode": {
     "capital": " is the capital of:",
     "subregion": " is located at:",
-    "area": " has an area of: (in km²)",
+    "area": " has an area of (in km²):",
     "population": " has populations:"
   },
   "difficulties": {
