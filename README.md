@@ -38,3 +38,6 @@ Installation: `npm i`
 Dev: `npm start`
 
 Build: `npm run build`
+
+## Screenshots
+![screenshots](screenshots.jpg "screenshots")
