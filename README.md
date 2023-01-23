@@ -1,8 +1,6 @@
 # Quiz Countries
 
-### App in progress
-
-## Live
+## Live (restricted - backend on heroku not working)
 
 https://dlwas-quiz.netlify.app
 
